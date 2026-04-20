@@ -1,5 +1,14 @@
 var isDate = function (input) {
-  //   write your code here
+  // Check if it's a Date object
+  if (input instanceof Date && !isNaN(input)) {
+    return true;
+  }
+
+  // Try to convert input to Date
+  const date = new Date(input);
+
+  // Check if valid date
+  return !isNaN(date.getTime());
 };
 
 // Do not change the code below.
